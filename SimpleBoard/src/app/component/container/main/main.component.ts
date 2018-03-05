@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {SharedService} from "../../../service/shared.service";
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { SharedService } from "../../../service/shared.service";
+import { ITask } from '../../../model/task.interface';
 
 @Component({
     selector: 'app-main',
@@ -9,14 +10,15 @@ import {SharedService} from "../../../service/shared.service";
 })
 export class MainComponent implements OnInit {
 
-    constructor(private route: ActivatedRoute, private  SharedService: SharedService) {
-    }
+    constructor(private route: ActivatedRoute, private SharedService: SharedService) { }
 
-    get tasks() {
-        return this.SharedService.taskCategory[this.route.snapshot.params.category];
-    }
+    get tasks() { return this.SharedService.taskCategory[this.route.snapshot.params.category]; }
 
-    ngOnInit() {
+    private onTaskActive(task: ITask) {
+        this.activedTask = task;
     }
+    private activedTask: ITask;
+
+    ngOnInit() { }
 
 }

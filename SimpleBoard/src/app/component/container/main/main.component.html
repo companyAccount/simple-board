@@ -1,3 +1,17 @@
 <main class="container">
-    <app-task-view [tasks]="tasks"></app-task-view>
+    <section class="row">
+        <div class="col col-12 text-center text-muted" *ngIf="tasks.length === 0">검색된 게시글이 없습니다.</div>
+        <div class="col col-4">
+            <app-task-list [tasks]="tasks" (onActive)="onTaskActive($event);"></app-task-list>
+        </div>
+        <div class="col col-8">
+            <app-task-detail [task]="activedTask"></app-task-detail>
+        </div>
+    </section>
+    <section class="float-right">
+        <div class="btn btn-primary" [routerLink]="['../write']">글 작성</div>
+        <ng-container *ngIf="activedTask">
+            <div class="btn btn-danger">글 삭제</div>
+        </ng-container>
+    </section>
 </main>

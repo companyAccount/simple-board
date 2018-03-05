@@ -1,5 +1,5 @@
-import {Injectable} from "@angular/core";
-import {ITask} from "../model/task.interface";
+import { Injectable } from "@angular/core";
+import { ITask } from "../model/task.interface";
 
 @Injectable()
 export class SharedService {
@@ -25,29 +25,21 @@ export class SharedService {
     taskCategory: { [category: string]: Array<ITask> } = {
         free: [
             {
-                title: "제목입니다.",
-                content: '내용입니다.',
+                title: "자유게시판 게시글",
+                content: '하하 이 곳이 자유게시판이구나. 별천지 로구나~!',
                 createTime: new Date(),
-                writer: '강전일'
-            },
-            {
-                title: "제목입니다.",
-                content: '내용입니다.',
-                createTime: new Date(),
-                writer: '강전일'
-            },
-            {
-                title: "제목입니다.",
-                content: '내용입니다.',
-                createTime: new Date(),
-                writer: '강전일'
-            },
-            {
-                title: "제목입니다.",
-                content: '내용입니다.',
-                createTime: new Date(),
-                writer: '강전일'
+                writer: '강전일',
+                category: 'free'
             }
         ],
+        policy: [
+            {
+                title: "정치게시판 게시글",
+                content: '내용',
+                createTime: new Date(),
+                writer: '강전일',
+                category: 'policy'
+            }
+        ]
     };
 }

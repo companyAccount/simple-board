@@ -12,6 +12,6 @@ export class CategoryGuardService implements CanActivate {
         if (this.SharedService.categories[route.params.category] === true) {
             return true;
         }
-        this.router.navigate(['main/free']);
+        this.router.navigate(['board/free/main']);
     }
 }

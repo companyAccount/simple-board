@@ -1,38 +1,50 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {RouterModule} from "@angular/router";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
 
-import {AppComponent} from './app.component';
-import {TaskViewComponent} from './component/common/task-view/task-view.component';
-import {TaskWriteComponent} from './component/common/task-write/task-write.component';
-import {MainComponent} from './component/container/main/main.component';
-import {WriteComponent} from './component/container/write/write.component';
-import {HeaderComponent} from './component/container/header/header.component';
-import {FooterComponent} from './component/container/footer/footer.component';
-import {SharedService} from "./service/shared.service";
-import {CategoryGuardService} from "./service/guard/category.guard.service";
+import { AppComponent } from './app.component';
+import { TaskWriteComponent } from './component/common/task-write/task-write.component';
+import { MainComponent } from './component/container/main/main.component';
+import { WriteComponent } from './component/container/write/write.component';
+import { HeaderComponent } from './component/container/header/header.component';
+import { FooterComponent } from './component/container/footer/footer.component';
+import { SharedService } from "./service/shared.service";
+import { CategoryGuardService } from "./service/guard/category.guard.service";
+import { TaskListComponent } from './component/common/task-list/task-list.component';
+import { TaskDetailComponent } from './component/common/task-detail/task-detail.component';
+import { TaskService } from './service/task.service';
 
 @NgModule({
     declarations: [
         AppComponent,
-        TaskViewComponent,
-        TaskWriteComponent,
         MainComponent,
         WriteComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        TaskListComponent,
+        TaskDetailComponent,
+        TaskWriteComponent
     ],
     imports: [
         BrowserModule,
+        FormsModule,
         RouterModule.forRoot([
-            {path: '', redirectTo: 'main/free', pathMatch: 'full'},
-            {path: 'main/:category', component: MainComponent, canActivate: [CategoryGuardService]},
-            {path: 'write/:category', component: WriteComponent}
+            { path: '', redirectTo: 'board/free/main', pathMatch: 'full' },
+            {
+                path: 'board/:category',
+                children: [
+                    { path: '', redirectTo: 'main', pathMatch: 'full' },
+                    { path: 'main', component: MainComponent, canActivate: [CategoryGuardService] },
+                    { path: 'write', component: WriteComponent, canActivate: [CategoryGuardService] },
+                ]
+            }
         ])
     ],
     providers: [
         SharedService,
-        CategoryGuardService
+        CategoryGuardService,
+        TaskService
     ],
     bootstrap: [AppComponent]
 })

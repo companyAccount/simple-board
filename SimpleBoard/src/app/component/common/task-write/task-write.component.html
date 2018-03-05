@@ -1,3 +1,14 @@
-<p>
-  task-write works!
-</p>
+<section class="row">
+  <div class="col col-2">
+  </div>
+  <div class="col col-2">
+    <input class="form-control mb-2" placeholder="작성자" [(ngModel)]="formData.writer">
+  </div>
+  <div class="col col-8">
+    <input class="form-control mb-2" placeholder="제목을 입력해 주세요." [(ngModel)]="formData.title">
+  </div>
+  <div class="col col-12">
+    <textarea class="form-control mb-2" rows="10" placeholder="내용을 입력해 주세요." [(ngModel)]="formData.content"></textarea>
+    <div class="btn btn-block btn-primary" (click)="write();">작성</div>
+  </div>
+</section>
