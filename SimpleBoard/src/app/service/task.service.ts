@@ -16,7 +16,7 @@ export class TaskService {
     constructor(private ConfigService: ConfigService) {
     }
 
-    write(request: IWriteTaskRequest): Observable<IWriteTaskResponse> {
+    writeTask(request: IWriteTaskRequest): Observable<IWriteTaskResponse> {
         const obv = new Subject<IWriteTaskResponse>();
         // 비동기적 처리를 표현하기 위한 예.
         setTimeout(() => {
@@ -29,6 +29,7 @@ export class TaskService {
                 createTime: new Date()
             };
             TASK_TABLE.unshift(task);
+            console.log(TASK_TABLE);
             obv.next({task});
         }, 1000);
         return obv;

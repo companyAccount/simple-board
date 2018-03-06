@@ -37,6 +37,7 @@ import {ConfigService} from "./service/config.service";
                 children: [
                     {path: '', redirectTo: 'main', pathMatch: 'full'},
                     {path: 'main', component: MainComponent, canActivate: [CategoryGuardService]},
+                    {path: 'main/:id', component: MainComponent, canActivate: [CategoryGuardService]},
                     {path: 'write', component: WriteComponent, canActivate: [CategoryGuardService]},
                 ]
             }

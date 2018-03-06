@@ -27,5 +27,6 @@ export class MainComponent implements OnInit {
     onTaskListItemActive(task: ITaskListItem) {
         this.activeTaskListItem = task;
     }
+
     activeTaskListItem: ITaskListItem;
 }

@@ -21,8 +21,16 @@ export class TaskWriteComponent implements OnInit {
         if (TaskWriteComponent.isWriting === true) return;
         TaskWriteComponent.isWriting = true;
 
-        this.TaskService.write(this.formData).subscribe(
+        this.formData.category = this.category;
+        
+        this.TaskService.writeTask(this.formData).subscribe(
             response => {
+                this.TaskService.getTaskList({category: this.category}).subscribe(
+                    _response => {
+                        console.log(_response);
+                        this.SharedService.taskList[this.category] = _response.taskList;
+                    }
+                );
                 this.SharedService.tasks[response.task.id] = response.task;
                 this.Route.navigate([`/board/${this.category}/main`]);
                 TaskWriteComponent.isWriting = false;

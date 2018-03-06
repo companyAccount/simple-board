@@ -19,9 +19,4 @@ export class WriteComponent implements OnInit {
     get category() {
         return this.route.snapshot.params.category;
     }
-
-    get tasks() {
-        return this.SharedService.tasks[this.category];
-    }
-
 }
