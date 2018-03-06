@@ -22,7 +22,7 @@ export class TaskWriteComponent implements OnInit {
         TaskWriteComponent.isWriting = true;
 
         this.formData.category = this.category;
-        
+
         this.TaskService.writeTask(this.formData).subscribe(
             response => {
                 this.TaskService.getTaskList({category: this.category}).subscribe(

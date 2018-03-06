@@ -41,3 +41,11 @@ export interface IGetTaskRequest {
 export interface IGetTaskResponse {
     task: ITask;
 }
+
+export interface IDeleteTaskRequest {
+    id: number;
+}
+
+export interface IDeleteTaskResponse {
+    id: number;
+}

@@ -15,6 +15,7 @@ import {TaskListComponent} from './component/common/task-list/task-list.componen
 import {TaskDetailComponent} from './component/common/task-detail/task-detail.component';
 import {TaskService} from './service/task.service';
 import {ConfigService} from "./service/config.service";
+import { TaskDeleteComponent } from './component/common/task-delete/task-delete.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import {ConfigService} from "./service/config.service";
         FooterComponent,
         TaskListComponent,
         TaskDetailComponent,
-        TaskWriteComponent
+        TaskWriteComponent,
+        TaskDeleteComponent
     ],
     imports: [
         BrowserModule,

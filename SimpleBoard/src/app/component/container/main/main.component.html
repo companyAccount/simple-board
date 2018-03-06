@@ -5,13 +5,11 @@
             <app-task-list [list]="taskList" (onActive)="onTaskListItemActive($event);"></app-task-list>
         </div>
         <div class="col col-8">
-            <app-task-detail  [listItem]="activeTaskListItem"></app-task-detail>
+            <app-task-detail [listItem]="activeTaskListItem"></app-task-detail>
         </div>
     </section>
     <section class="float-right">
         <div class="btn btn-primary" [routerLink]="['../write']">글 작성</div>
-        <ng-container *ngIf="activeTaskListItem">
-            <div class="btn btn-danger">글 삭제</div>
-        </ng-container>
+        <app-task-delete [listItem]="activeTaskListItem"></app-task-delete>
     </section>
 </main>
