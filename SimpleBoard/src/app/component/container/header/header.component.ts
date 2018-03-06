@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
     }
 
     get tasks() {
-        return this.SharedService.taskCategory[this.category];
+        return this.SharedService.tasks[this.category];
     }
 
     ngOnInit() {

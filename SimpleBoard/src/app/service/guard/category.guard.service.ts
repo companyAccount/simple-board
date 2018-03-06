@@ -1,17 +1,18 @@
 import {Injectable} from "@angular/core";
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot} from "@angular/router";
-import {SharedService} from "../shared.service";
+import {ConfigService} from "../config.service";
 
 @Injectable()
 export class CategoryGuardService implements CanActivate {
-    constructor(private router: Router, private SharedService: SharedService) {
+    constructor(private router: Router, private ConfigService: ConfigService) {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         console.log(route.params.category);
-        if (this.SharedService.categories[route.params.category] === true) {
+        if (this.ConfigService.categories[route.params.category]) {
             return true;
         }
         this.router.navigate(['board/free/main']);
+        return false;
     }
 }

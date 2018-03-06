@@ -1,45 +1,21 @@
-import { Injectable } from "@angular/core";
-import { ITask } from "../model/task.interface";
+import {Injectable} from "@angular/core";
+import {ITask, ITaskListItem} from "../model/task.interface";
+import {ConfigService} from "./config.service";
+import {TaskService} from "./task.service";
 
 @Injectable()
 export class SharedService {
-    constructor() {
-        for (const category in this.categories) {
-            if (this.categories[category] === true) {
-                if (this.taskCategory[category] === undefined) {
-                    this.taskCategory[category] = [];
+    constructor(private ConfigService: ConfigService, private  TaskService: TaskService) {
+        for (const category in this.ConfigService.categories) {
+            this.taskList[category] = [];
+            this.TaskService.getTaskList({category}).subscribe(
+                response => {
+                    this.taskList[category] = response.taskList;
                 }
-            }
+            );
         }
     }
 
-    categories = {
-        free: true,
-        humor: true,
-        horror: true,
-        movie: true,
-        policy: true,
-        worry: true
-    };
-
-    taskCategory: { [category: string]: Array<ITask> } = {
-        free: [
-            {
-                title: "자유게시판 게시글",
-                content: '하하 이 곳이 자유게시판이구나. 별천지 로구나~!',
-                createTime: new Date(),
-                writer: '강전일',
-                category: 'free'
-            }
-        ],
-        policy: [
-            {
-                title: "정치게시판 게시글",
-                content: '내용',
-                createTime: new Date(),
-                writer: '강전일',
-                category: 'policy'
-            }
-        ]
-    };
+    taskList: { [category: string]: ITaskListItem[] } = {};
+    tasks: { [id: string]: ITask } = {};
 }

@@ -1,33 +1,42 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ITaskWriteRequest } from '../../../model/task.interface';
-import { SharedService } from '../../../service/shared.service';
-import { TaskService } from '../../../service/task.service';
+import {Component, OnInit, Input} from '@angular/core';
+import {IWriteTaskRequest} from '../../../model/task.interface';
+import {SharedService} from '../../../service/shared.service';
+import {TaskService} from '../../../service/task.service';
+import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-task-write',
-  templateUrl: './task-write.component.html',
-  styleUrls: ['./task-write.component.css']
+    selector: 'app-task-write',
+    templateUrl: './task-write.component.html',
+    styleUrls: ['./task-write.component.css']
 })
 export class TaskWriteComponent implements OnInit {
 
-  constructor(private SharedService: SharedService, private TaskService: TaskService) { }
+    constructor(private SharedService: SharedService, private TaskService: TaskService, private Route: Router) {
+    }
 
-  ngOnInit() { }
+    ngOnInit() {
+    }
 
-  private write() {
-    this.TaskService.write(this.formData).subscribe(
-      task => {
+    write() {
+        if (TaskWriteComponent.isWriting === true) return;
+        TaskWriteComponent.isWriting = true;
 
-      }
-    );
-  }
+        this.TaskService.write(this.formData).subscribe(
+            response => {
+                this.SharedService.tasks[response.task.id] = response.task;
+                this.Route.navigate([`/board/${this.category}/main`]);
+                TaskWriteComponent.isWriting = false;
+            }
+        );
+    }
 
-  private formData: ITaskWriteRequest = {
-    category: null,
-    writer: null,
-    title: null,
-    content: null
-  };
+    formData: IWriteTaskRequest = {
+        category: null,
+        writer: null,
+        title: null,
+        content: null
+    };
 
-  @Input() tasks: ITask[];
+    static isWriting: boolean = false;
+    @Input() category: string;
 }

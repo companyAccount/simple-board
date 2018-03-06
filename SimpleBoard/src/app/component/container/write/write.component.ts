@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+
+import {SharedService} from "../../../service/shared.service";
 
 @Component({
-  selector: 'app-write',
-  templateUrl: './write.component.html',
-  styleUrls: ['./write.component.css']
+    selector: 'app-write',
+    templateUrl: './write.component.html',
+    styleUrls: ['./write.component.css']
 })
 export class WriteComponent implements OnInit {
 
-  constructor() { }
+    constructor(private route: ActivatedRoute, private SharedService: SharedService) {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
+
+    get category() {
+        return this.route.snapshot.params.category;
+    }
+
+    get tasks() {
+        return this.SharedService.tasks[this.category];
+    }
 
 }

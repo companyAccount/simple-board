@@ -1,7 +1,8 @@
 <section class="task-list">
-  <div class="text-muted mb-2" *ngIf="tasks.length > 0">검색결과 {{tasks.length}}개</div>
-  <div class="btn btn-block" *ngFor="let task of tasks" [ngClass]="{'btn-light': actived !== task, 'btn-primary': actived === task}"
-    (click)="active(task);">
-    {{task.title}}
-  </div>
+    <div class="text-muted mb-2" *ngIf="list.length > 0">검색결과 {{list.length}}개</div>
+    <div class="btn btn-block" *ngFor="let task of list"
+         [ngClass]="{'btn-light': actived !== task, 'btn-primary': actived === task}"
+         (click)="active(task);">
+        {{task.title}}
+    </div>
 </section>
