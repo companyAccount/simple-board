@@ -22,70 +22,7 @@
     <option name="FILTER_BY_CURRENT_PROJECT" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="057b7447-e5f6-4ace-8056-41b57472127d" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/SimpleBoard.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/.angular-cli.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/.editorconfig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/.gitignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/e2e/app.e2e-spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/e2e/app.po.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/e2e/tsconfig.e2e.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/karma.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/package-lock.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/protractor.conf.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/app.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/app.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/app.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/app.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/app.module.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-view/task-view.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-view/task-view.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-view/task-view.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-view/task-view.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-write/task-write.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-write/task-write.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-write/task-write.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/common/task-write/task-write.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/footer/footer.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/footer/footer.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/footer/footer.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/footer/footer.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/header/header.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/header/header.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/header/header.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/header/header.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/main/main.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/main/main.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/main/main.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/main/main.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/write/write.component.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/write/write.component.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/write/write.component.spec.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/component/container/write/write.component.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/model/task.interface.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/service/guard/category.guard.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/app/service/shared.service.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/assets/.gitkeep" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/environments/environment.prod.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/environments/environment.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/favicon.ico" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/main.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/polyfills.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/test.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/tsconfig.app.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/tsconfig.spec.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/src/typings.d.ts" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/tsconfig.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SimpleBoard/tslint.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
-    </list>
+    <list default="true" id="057b7447-e5f6-4ace-8056-41b57472127d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -275,12 +212,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520230517748</updated>
-      <workItem from="1520230519246" duration="9520000" />
+      <workItem from="1520230519246" duration="9565000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9520000" />
+    <option name="totallyTimeSpent" value="9565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
